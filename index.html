@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Boda</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/styles.min.css">
 </head>
-<body>
-    <!-- Pasaporte -->
-    <section>
-        Pasaporte
+<body style="background: var(--color-fondo);">
+    <section id="portada">
+        <div style="height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;">
+            <div class="boarding-pass">
+                <div class="header">BOARDING PASS</div>
+                <div class="content">Hola</div>
+            </div>
+            <div class="passport" style="position: absolute;">Holi</div>
+        </div>
     </section>
-    <!-- Parte 1 -->
-    <section>
-        sdfasdfasdfasdfasd
+    <section id="principal" style="display: none;">
+        <div class="grid grid-cols-2 gap-4">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+        </div>
     </section>
+    <script>
+        function irPagina() {
+            document.getElementById("portada").style.display = 'none';
+            document.getElementById("principal").style.display = 'block';
+        }
+    </script>
 </body>
 </html>

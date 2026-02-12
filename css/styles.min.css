@@ -1,0 +1,42 @@
+:root {
+    --color-fondo: #E1C5D8;
+    --color-principal: #93709E;
+}
+
+.passport {
+    width: 90vw;
+    height: 60vh;
+    background: var(--color-principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boarding-pass {
+    position: absolute; 
+    width: 100%; 
+    transform: rotate(90deg);
+
+    .header {
+        width: 75vh; 
+        height: 3rem; 
+        justify-self: center; 
+        background: var(--color-principal); 
+        border-radius: 1rem 1rem 0 0; 
+        margin-right: 5rem; 
+        display: flex; 
+        align-items: center; 
+        letter-spacing: 1rem; 
+        padding-left: 1rem;
+    }
+
+    .content {
+        width: 75vh; 
+        height: 30vh; 
+        justify-self: center; 
+        background: white; 
+        border-radius: 0 0 1rem 1rem; 
+        margin-right: 5rem; 
+        padding: 1rem;
+    }
+}
