@@ -23,7 +23,7 @@
         justify-self: center; 
         background: var(--color-principal); 
         border-radius: 1rem 1rem 0 0; 
-        /* margin-right: 5rem;  */
+        margin-right: 5rem; 
         display: flex; 
         align-items: center; 
         letter-spacing: 1rem; 
@@ -36,7 +36,7 @@
         justify-self: center; 
         background: white; 
         border-radius: 0 0 1rem 1rem; 
-        /* margin-right: 5rem;  */
+        margin-right: 5rem; 
         padding: 1rem;
     }
 }
