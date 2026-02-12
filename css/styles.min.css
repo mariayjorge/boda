@@ -46,8 +46,8 @@
     position: absolute; 
     width: 100vw; 
     background: red;
-    /* transform: rotate(90deg);
-    display: inline-block; */
+    transform: rotate(90deg);
+    display: inline-block;
 
     /* .header {
         width: 75vh; 
