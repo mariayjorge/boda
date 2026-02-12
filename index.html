@@ -4,69 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Boda</title>
-    <style>
-        :root {
-            --lavanda: #967bb6;
-            --papel: #fdfcf9;
-        }
-        body {
-            background-color: #e5e0d8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-            font-family: 'serif';
-        }
-        /* Contenedor del sobre */
-        .sobre-wrapper {
-            position: relative;
-            width: 300px;
-            height: 200px;
-            background-color: var(--lavanda);
-            cursor: pointer;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        }
-        /* La solapa (el triángulo) */
-        .sobre-wrapper::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-left: 150px solid transparent;
-            border-right: 150px solid transparent;
-            border-top: 100px solid #866ca3; /* Un tono más oscuro */
-            transition: transform 0.5s;
-            transform-origin: top;
-            z-index: 2;
-        }
-        /* Al hacer clic (usaremos una clase de JS) */
-        .sobre-wrapper.abierto::before {
-            transform: rotateX(180deg);
-        }
-        .texto {
-            position: absolute;
-            width: 100%;
-            text-align: center;
-            top: 50%;
-            color: white;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-    </style>
 </head>
 <body>
-
-    <div class="sobre-wrapper" id="sobre" onclick="estaAbierto()">
-        <div class="texto">TOCAR PARA ABRIR</div>
-    </div>
-
-    <script>
-        function estaAbierto() {
-            document.getElementById('sobre').classList.toggle('abierto');
-            // Aquí puedes añadir que después de 1 segundo se muestre la carta
-        }
-    </script>
+    <!-- Pasaporte -->
+    <section>
+        Pasaporte
+    </section>
+    <!-- Parte 1 -->
+    <section>
+        
+    </section>
 </body>
 </html>
