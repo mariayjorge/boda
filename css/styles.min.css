@@ -45,6 +45,8 @@
 .boarding-pass-prueba {
     position: absolute;
     width: 100%;
+    transform: rotate(90deg);
+    display: inline-block;
 
     .header {
         background: var(--color-principal);
