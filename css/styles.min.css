@@ -1,6 +1,7 @@
 :root {
     --color-fondo: #E1C5D8;
     --color-principal: #93709E;
+    --color-gris: #E3E3E3;
 }
 
 .boarding-pass {
@@ -33,9 +34,31 @@
     position: absolute;
     width: 80%;
     background: var(--color-principal);
-    /*
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center; */
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .passport {
+        position: relative;
+        background: var(--color-principal);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* margin: 1rem; */
+    }
+
+    .passport-open {
+        width: 100%;
+
+        .header {
+            background: var(--color-gris);
+        }
+
+        .content {
+            background: white;
+        }
+    }
 }

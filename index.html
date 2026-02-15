@@ -9,7 +9,7 @@
 </head>
 <body style="background: var(--color-fondo);">
     <section id="portada">
-        <div style="height: calc(var(--vh, 1vh) * 100); background: red;">
+        <div style="height: calc(var(--vh, 1vh) * 100);">
             <div style="height: 100%; display: flex; align-items: center; justify-content: center; position: relative;" onclick="irPagina()">
                 <div class="boarding-pass">
                     <div class="header">BOARDING PASS</div>
@@ -20,22 +20,38 @@
                         <div>Contact</div>
                     </div>
                 </div>
-                <div class="passport">Holi</div>
+                <div class="passport">
+                    <div>Wedding</div>
+                    <div>PASSPORT</div>
+                    <div>Logo</div>
+                    <div>TO THE MARRIAGE OF</div>
+                    <div>Maria & Jorge</div>
+                    <div>25.07.26</div>
+                </div>
             </div>
         </div>
-        <!-- <div style="height: 90vh; display: flex; align-items: center; justify-content: center; position: relative;" onclick="irPagina()">
-            <div class="boarding-pass">
-                <div class="header">BOARDING PASS</div>
-                <div class="content">Hola</div>
-            </div>
-            <div class="passport" style="position: absolute;">Holi</div>
-            <div style="position: absolute; align-self: end; padding-bottom: 5rem;">PULSA PARA ABRIR</div>
-        </div> -->
     </section>
-    <section id="principal" style="display: none;">
-        <div class="grid grid-cols-2 gap-4">
-            <div style="background: red">01</div>
-            <div>02</div>
+    <section id="principal" style="padding: 1rem; display: none;">
+        <div class="principal">
+            <div class="passport">
+                <div>Wedding</div>
+                <div>PASSPORT</div>
+                <div>Logo</div>
+                <div>TO THE MARRIAGE OF</div>
+                <div>Maria & Jorge</div>
+                <div>25.07.26</div>
+            </div>
+            <div class="passport-open">
+                <div class="header">
+                    <div>Cabecera</div>
+                    <img
+                        alt="mapamundi"
+                        src="img/mapamundi.png"/>
+                </div>
+                <div class="content">
+                    <div>DETALLES DE LA BODA</div>
+                </div>
+            </div>
             <div>03</div>
         </div>
     </section>
