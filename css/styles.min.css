@@ -3,46 +3,7 @@
     --color-principal: #93709E;
 }
 
-.passport {
-    width: 90vw;
-    height: 60vh;
-    background: var(--color-principal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .boarding-pass {
-    position: absolute; 
-    width: 100%; 
-    transform: rotate(90deg);
-    display: inline-block;
-
-    .header {
-        width: 75vh; 
-        height: 3rem; 
-        justify-self: center; 
-        background: var(--color-principal); 
-        border-radius: 1rem 1rem 0 0; 
-        margin-right: 5rem; 
-        display: flex; 
-        align-items: center; 
-        letter-spacing: 1rem; 
-        padding-left: 1rem;
-    }
-
-    .content {
-        width: 75vh; 
-        height: 30vh; 
-        justify-self: center; 
-        background: white; 
-        border-radius: 0 0 1rem 1rem; 
-        margin-right: 5rem; 
-        padding: 1rem;
-    }
-}
-
-.boarding-pass-prueba {
     position: absolute;
     width: 100%;
     height: 30%;
@@ -66,4 +27,15 @@
         border-radius: 0 0 1rem 1rem;
         padding: 1rem;
     }
+}
+
+.passport {
+    position: absolute;
+    width: 80%;
+    background: var(--color-principal);
+    /*
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
 }
