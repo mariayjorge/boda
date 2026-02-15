@@ -45,16 +45,25 @@
 .boarding-pass-prueba {
     position: absolute;
     width: 100%;
-    transform: rotate(90deg);
-    display: inline-block;
+    height: 20%;
+    /* transform: rotate(90deg);
+    display: inline-block; */
 
     .header {
+        height: 3rem;
         background: var(--color-principal);
         border-radius: 1rem 1rem 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding-left: 1rem;
+        letter-spacing: 1rem; 
     }
 
     .content {
+        height: 100%;
         background: white;
         border-radius: 0 0 1rem 1rem;
+        padding: 1rem;
     }
 }
