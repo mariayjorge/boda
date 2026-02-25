@@ -72,7 +72,7 @@
 
 .passport {
     position: absolute;
-    width: 75%;
+    width: 80%;
     background: var(--color-principal);
     display: grid;
     justify-content: center;
