@@ -13,25 +13,42 @@
             <div style="height: 100%; display: flex; align-items: center; justify-content: center; position: relative;" onclick="irPagina()">
                 <div class="boarding-pass">
                     <div class="header">BOARDING PASS</div>
-                    <div class="content">
-                        <div>TO</div>
-                        <div>MADRID</div>
-                        <div>Passenger</div>
-                        <div>Contact</div>
+                    <div class="content" style="position: relative;">
+                        <div style="position: absolute; top: 0; left: 0; opacity: 20%;">
+                            <img
+                                alt="sello"
+                                src="img/sello.png"
+                                style="width: 8rem;"/>
+                        </div>
+                        <div style="position: relative; font-weight: 100; font-size: .8rem;">Desde</div>
+                        <div style="position: relative; font-weight: 500;">MADRID</div>
+                        <div style="position: relative; font-weight: 100; font-size: .8rem;">Pasajero</div>
+                        <div style="position: relative; font-weight: 100; font-size: .8rem;">Contacto</div>
+                        <div style="position: relative; margin-top: 2rem;">
+                            <img
+                                alt="barras"
+                                src="img/barras.png"
+                                style="width: 10rem;"/>
+                        </div>
                     </div>
                 </div>
                 <div class="passport">
-                    <div>Wedding</div>
-                    <div>PASSPORT</div>
-                    <div>Logo</div>
-                    <div>TO THE MARRIAGE OF</div>
-                    <div>Maria & Jorge</div>
-                    <div>25.07.26</div>
+                    <div class="alex" style="line-height: 1rem;">Wedding</div>
+                    <div class="bodoni" style="line-height: 2rem; font-size: 2rem;">PASSPORT</div>
+                    <div>
+                        <img
+                            alt="logo"
+                            src="img/logo-blanco.png"
+                            style="width: 10rem;"/>
+                    </div>
+                    <div class="bodoni">TO THE MARRIAGE OF</div>
+                    <div class="alex">Maria & Jorge</div>
+                    <div class="bodoni">25.07.26</div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="principal" style="padding: 1rem; display: none;">
+    <!-- <section id="principal" style="padding: 1rem; display: none;">
         <div class="principal">
             <div class="passport">
                 <div>Wedding</div>
@@ -54,7 +71,7 @@
             </div>
             <div>03</div>
         </div>
-    </section>
+    </section> -->
     <script>
         function actualizarVH() {
             let vh = window.innerHeight * 0.01;
@@ -64,8 +81,8 @@
         window.addEventListener('load', actualizarVH);
 
         function irPagina() {
-            document.getElementById("portada").style.display = 'none';
-            document.getElementById("principal").style.display = 'block';
+            // document.getElementById("portada").style.display = 'none';
+            // document.getElementById("principal").style.display = 'block';
         }
     </script>
 </body>

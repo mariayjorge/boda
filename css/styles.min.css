@@ -1,25 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Alumni+Sans+Pinstripe:ital@0;1&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap');
+
 :root {
     --color-fondo: #E1C5D8;
     --color-principal: #93709E;
     --color-gris: #E3E3E3;
+    --font-alumni: "Alumni Sans Pinstripe", sans-serif;
+    --font-roboto: "Roboto Flex", sans-serif;
+    --font-alex: "Alex Brush", cursive;
+    --font-bodoni: "Bodoni Moda", serif;
+}
+
+
+.alumni {
+    font-family: var(--font-alumni);
+    font-style: normal;
+    font-weight: 900;
+}
+.roboto {
+    font-family: var(--font-roboto);
+    font-style: normal;
+    font-weight: normal;
+}
+.alex {
+    font-family: var(--font-alex);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+.bodoni {
+    font-family: var(--font-bodoni);
+    font-weight: 400;
+    font-style: normal;
 }
 
 .boarding-pass {
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 30%;
     transform: rotate(90deg);
     display: inline-block;
+    margin-bottom: 1rem;
 
     .header {
-        height: 25%;
         background: var(--color-principal);
         border-radius: 1rem 1rem 0 0;
         display: flex;
         align-items: center;
         justify-content: left;
-        padding-left: 1rem;
-        letter-spacing: 1rem; 
+        padding: .5rem 1rem;
+        letter-spacing: .5rem; 
+        font-family: var(--font-alumni);
+        font-style: normal;
+        font-weight: 900;
+        border-right: .1rem dashed black;
+        border-top: .2rem solid var(--color-principal);
     }
 
     .content {
@@ -27,16 +61,25 @@
         background: white;
         border-radius: 0 0 1rem 1rem;
         padding: 1rem;
+        font-family: var(--font-roboto);
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: .1rem;
+        border-right: .1rem dashed black;
+        border-bottom: .8rem solid white;
     }
 }
 
 .passport {
     position: absolute;
-    width: 80%;
+    width: 75%;
     background: var(--color-principal);
     display: grid;
     justify-content: center;
     text-align: center;
+    color: white;
+    padding: 2rem 0 1.5rem 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .principal {
