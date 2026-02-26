@@ -72,10 +72,20 @@
                         src="img/mapamundi.png"/>
                 </div>
                 <div class="content">
-                    <div>DETALLES DE LA BODA</div>
                 </div>
             </div>
-            <div>03</div>
+            <div class="count-down">
+                <div class="header">CUENTA ATRÁS</div>
+                <div class="content">
+                    <div id="dias"></div>
+                    <div>:</div>
+                    <div id="horas"></div>
+                    <div>:</div>
+                    <div id="minutos"></div>
+                    <div>:</div>
+                    <div id="segundos"></div>
+                </div>
+            </div>
         </div>
     </section>
     <script>
@@ -90,6 +100,50 @@
             document.getElementById("portada").style.display = 'none';
             document.getElementById("principal").style.display = 'block';
         }
+
+        // Cuenta atrás
+        const dias = document.getElementById("dias");
+        const horas = document.getElementById("horas");
+        const minutos = document.getElementById("minutos");
+        const segundos = document.getElementById("segundos");
+
+        function ahoraEnMadrid() {
+            const ahora = new Date();
+            const formatter = new Intl.DateTimeFormat("en-US", {
+                timeZone: "Europe/Madrid",
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                hour12: false
+            });
+            const partes = formatter.formatToParts(ahora);
+            const valores = {};
+            partes.forEach(p => valores[p.type] = p.value);
+            return new Date(`${valores.year}-${valores.month}-${valores.day}T` + `${valores.hour}:${valores.minute}:${valores.second}`);
+        }
+
+        const date = new Date("2026-07-25T19:30:00");
+        function actualizarContador() {
+            const diferencia = date.getTime() - ahoraEnMadrid().getTime();
+            if (diferencia <= 0) {
+                clearInterval(intervalo);
+                dias.textContent = 0;
+                horas.textContent = "0";
+                minutos.textContent = "0";
+                segundos.textContent = "0";
+                return;
+            }
+            const segundosTotales = Math.floor(diferencia / 1000);
+            dias.textContent = Math.floor(segundosTotales / (60 * 60 * 24));
+            horas.textContent = String(Math.floor((segundosTotales % (60 * 60 * 24) / (60 * 60)))).padStart(2, "0");
+            minutos.textContent = String(Math.floor((segundosTotales % (60 * 60)) / 60)).padStart(2, "0");
+            segundos.textContent = String(segundosTotales % 60).padStart(2, "0");
+        }
+        actualizarContador();
+        const intervalo = setInterval(actualizarContador, 1000);
     </script>
 </body>
 </html>
