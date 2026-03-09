@@ -49,9 +49,10 @@
             </div>
         </div>
     </section>
-    <section id="principal" style="padding: 1rem; display: none;">
-        <div class="principal">
-            <div class="passport-close">
+    <section id="principal" style="display: none; padding: 1rem;">
+        <div class="passports" style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <div class="passport-close">
                     <div class="alex" style="line-height: 1rem;">Wedding</div>
                     <div class="bodoni" style="line-height: 1rem; font-size: 1rem;">PASSPORT</div>
                     <div style="justify-self: center;">
@@ -64,26 +65,105 @@
                     <div class="alex">Maria & Jorge</div>
                     <div class="bodoni" style="font-size: .5rem; letter-spacing: .2rem;">25.07.2026</div>
                 </div>
+            </div>
             <div class="passport-open">
                 <div class="header">
-                    <div>Cabecera</div>
                     <img
                         alt="mapamundi"
                         src="img/mapamundi.png"/>
                 </div>
                 <div class="content">
+                    <div class="bodoni" style="text-align: center; letter-spacing: .1rem; font-size: .5rem; font-weight: 600; color: var(--color-principal); margin-bottom: .3rem; margin-top: .2rem;">DETALLES DE LA BODA</div>
+                    <div style="display: grid; grid-template-columns: 40% 60%;">
+                        <div>Imagen</div>
+                        <div style="margin-top: .2rem;">
+                            <div style="display: grid; grid-template-columns: 30% 30% 40%;">
+                                <div>
+                                    <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">EVENTO</div>
+                                    <div style="line-height: .7rem;">BODA</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">LUGAR</div>
+                                    <div style="line-height: .7rem;">CIUDAD</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">#EVENTO</div>
+                                    <div style="line-height: .7rem;">250726</div>
+                                </div>
+                            </div>
+                            <div style="border-bottom: .1rem solid var(--color-dorado); margin-bottom: .4rem; margin-top: .2rem; margin-right: .5rem;"></div>
+                            <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">NOMBRE</div>
+                            <div style="margin-bottom: .2rem;">MARÍA & JORGE</div>
+                            <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">FECHA</div>
+                            <div style="margin-bottom: .2rem;">25 JULIO 2026, 17.00</div>
+                            <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">LOCALIZACIÓN</div>
+                            <div style="margin-bottom: .2rem;">HOLIS</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div id="count-down" style="margin-bottom: .5rem;">
             <div class="count-down">
-                <div class="header">TARJETA DE EMBARQUE</div>
+                <div class="header">PRÓXIMO EMBARQUE</div>
                 <div class="content">
-                    <div id="dias"></div>
-                    <div>:</div>
-                    <div id="horas"></div>
-                    <div>:</div>
-                    <div id="minutos"></div>
-                    <div>:</div>
-                    <div id="segundos"></div>
+                    <div style="width: 2.5rem; text-align: center;">
+                        <div id="dias" style="margin-bottom: .25rem;"></div>
+                        <div style="font-size: .4rem;">DÍAS</div>
+                    </div>
+                    <div style="align-self: baseline; padding: 0 .5rem;">:</div>
+                    <div style="width: 2.5rem; text-align: center;">
+                        <div id="horas" style="margin-bottom: .25rem;"></div>
+                        <div style="font-size: .4rem;">HORAS</div>
+                    </div>
+                    <div style="align-self: baseline; padding: 0 .5rem;">:</div>
+                    <div style="width: fit-content; text-align: center;">
+                        <div id="minutos" style="margin-bottom: .25rem;"></div>
+                        <div style="font-size: .4rem;">MINUTOS</div>
+                    </div>
+                    <div style="align-self: baseline; padding: 0 .5rem;">:</div>
+                    <div style="width: fit-content; text-align: center;">
+                        <div id="segundos" style="margin-bottom: .25rem; color: var(--color-dorado);"></div>
+                        <div style="font-size: .4rem;">SEGUNDOS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="boarding-pass-group">
+            <div class="boarding-pass-group">
+                <div class="boarding-pass-complete">
+                    <div class="header">BOARDING PASS</div>
+                    <div class="content" style="position: relative;">
+                        <div style="position: absolute; top: 0; left: 0; opacity: 20%;">
+                            <img
+                                alt="sello"
+                                src="img/sello.png"
+                                style="width: 5rem;"/>
+                        </div>
+                        <div style="position: relative; display: grid; grid-template-columns: 70% 30%;">
+                            <div>
+                                <div style="display: grid; grid-template-columns: 50% 50%;">
+                                    <div>
+                                        <div style="font-weight: 100; font-size: .4rem;">DESDE</div>
+                                        <div style="font-weight: 400; font-size: .5rem;">MADRID</div>
+                                    </div>
+                                    <div style="justify-self: flex-end; margin-right: .5rem;">
+                                        <div style="font-weight: 100; font-size: .4rem;">DESDE</div>
+                                        <div style="font-weight: 400; font-size: .5rem;">MADRID</div>
+                                    </div>
+                                </div>
+                                <div style="position: relative; font-weight: 100; font-size: .4rem; margin-top: .5rem;">NOMBRE DEL PASAJERO:</div>
+                                <div style="position: relative; font-weight: 100; font-size: .4rem;">NÚMERO DE CONTACTO:</div>
+                            </div>
+                            <div>Imagen</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rsvp">
+                    <div class="header">RSVP</div>
+                    <div class="content">
+                        <div>CONFIRMA TU ASISTENCIA</div>
+                    </div>
                 </div>
             </div>
         </div>

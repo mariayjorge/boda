@@ -4,6 +4,7 @@
     --color-fondo: #E1C5D8;
     --color-principal: #93709E;
     --color-gris: #E3E3E3;
+    --color-dorado: #D4AF37 ;
     --font-alumni: "Alumni Sans Pinstripe", sans-serif;
     --font-roboto: "Roboto Flex", sans-serif;
     --font-alex: "Alex Brush", cursive;
@@ -78,18 +79,20 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.principal {
+.passports {
     display: grid;
     grid-template-columns: 45% 55%;
 
     .passport-close {
         width: fit-content;
+        height: fit-content;
         background: var(--color-principal);
         display: grid;
         justify-content: center;
         text-align: center;
         color: white;
         padding: 1rem 1.5rem;
+        box-shadow: rgb(255, 255, 255) -10px -10px 0px 0px;
     }
 
     .passport-open {
@@ -100,41 +103,114 @@
         }
 
         .content {
+            box-shadow: inset 0px 8px 14px -12px rgba(0, 0, 0, 0.25);
+            padding: .25rem;
             background: white;
+            font-family: var(--font-alumni);
+            font-size: .5rem;
+            font-style: normal;
+            font-weight: 900;
         }
     }
 }
 
 .count-down {
-    width: 200%;
-    margin-bottom: 1rem;
+    width: fit-content;
+    justify-self: center;
 
     .header {
-        background: var(--color-principal);
-        border-radius: 1rem 1rem 0 0;
         display: flex;
         align-items: center;
-        justify-content: left;
-        padding: .5rem 1rem;
-        letter-spacing: .5rem; 
+        justify-content: center;
+        background: var(--color-principal);
+        border-radius: .5rem .5rem 0 0;
+        padding: .15rem 1rem;
+        letter-spacing: .25rem; 
         font-family: var(--font-alumni);
+        font-size: .6rem;
         font-style: normal;
         font-weight: 900;
-        border-right: .1rem dashed black;
         border-top: .2rem solid var(--color-principal);
+        color: white;
     }
 
     .content {
-        display: grid;
-        grid-template-columns: 25% 5% 17.5% 5% 17.5% 5% 25%;
         background: white;
-        border-radius: 0 0 1rem 1rem;
-        padding: 1rem;
+        border-radius: 0 0 .5rem .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: var(--font-bodoni);
+        font-size: .8rem;
         font-style: normal;
         font-weight: normal;
         letter-spacing: .1rem;
-        border-right: .1rem dashed black;
-        border-bottom: .8rem solid white;
+        padding: .25rem;
+    }
+}
+
+.boarding-pass-group {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    
+    .boarding-pass-complete {
+        width: 100%;
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-principal);
+            border-radius: .5rem .5rem 0 0;
+            padding: .15rem 1rem;
+            letter-spacing: .5rem; 
+            font-family: var(--font-alumni);
+            font-size: .6rem;
+            font-style: normal;
+            font-weight: 900;
+            border-top: .2rem solid var(--color-principal);
+            color: white;
+        }
+
+        .content {
+            background: white;
+            border-radius: 0 0 .5rem .5rem;
+            font-family: var(--font-roboto);
+            font-style: normal;
+            font-weight: normal;
+            letter-spacing: .1rem;
+            padding: .5rem;
+        }
+    }
+
+    .rsvp {
+        width: 100%;
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-principal);
+            border-radius: .5rem .5rem 0 0;
+            padding: .15rem 1rem;
+            letter-spacing: .5rem; 
+            font-family: var(--font-alumni);
+            font-size: .6rem;
+            font-style: normal;
+            font-weight: 900;
+            border-top: .2rem solid var(--color-principal);
+            color: white;
+        }
+
+        .content {
+            background: white;
+            border-radius: 0 0 .5rem .5rem;
+            font-family: var(--font-alumni);
+            font-size: .6rem;
+            font-style: normal;
+            font-weight: 900;
+            letter-spacing: .1rem;
+            padding: .5rem;
+        }
     }
 }
