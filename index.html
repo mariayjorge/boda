@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body style="background: var(--color-fondo);">
+    <audio id="musica" loop>
+        <source 
+            src="songs/renaissance.mp3" 
+            type="audio/mpeg">
+    </audio>
     <section id="portada">
         <div style="height: calc(var(--vh, 1vh) * 100);">
-            <div style="height: 100%; display: flex; align-items: center; justify-content: center; position: relative;" onclick="irPagina()">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center; position: relative;" onclick="irPagina(0)">
                 <div class="boarding-pass">
                     <div class="header">BOARDING PASS</div>
                     <div class="content" style="position: relative;">
@@ -66,7 +71,7 @@
                     <div class="bodoni" style="font-size: .5rem; letter-spacing: .2rem;">25.07.2026</div>
                 </div>
             </div>
-            <div class="passport-open">
+            <div class="passport-open" onclick="irPagina(1)">
                 <div class="header">
                     <img
                         alt="mapamundi"
@@ -79,24 +84,24 @@
                         <div style="margin-top: .2rem;">
                             <div style="display: grid; grid-template-columns: 30% 30% 40%;">
                                 <div>
-                                    <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">EVENTO</div>
+                                    <div style="font-size: .5rem; color: var(--color-dorado); line-height: .3rem;">EVENTO</div>
                                     <div style="line-height: .7rem;">BODA</div>
                                 </div>
                                 <div>
-                                    <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">LUGAR</div>
+                                    <div style="font-size: .5rem; color: var(--color-dorado); line-height: .3rem;">LUGAR</div>
                                     <div style="line-height: .7rem;">CIUDAD</div>
                                 </div>
                                 <div>
-                                    <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">#EVENTO</div>
+                                    <div style="font-size: .5rem; color: var(--color-dorado); line-height: .3rem;">#EVENTO</div>
                                     <div style="line-height: .7rem;">250726</div>
                                 </div>
                             </div>
                             <div style="border-bottom: .1rem solid var(--color-dorado); margin-bottom: .4rem; margin-top: .2rem; margin-right: .5rem;"></div>
-                            <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">NOMBRE</div>
+                            <div style="font-size: .5rem; color: var(--color-dorado); line-height: .3rem;">NOMBRE</div>
                             <div style="margin-bottom: .2rem;">MARÍA & JORGE</div>
-                            <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">FECHA</div>
+                            <div style="font-size: .5rem; color: var(--color-dorado); line-height: .3rem;">FECHA</div>
                             <div style="margin-bottom: .2rem;">25 JULIO 2026, 17.00</div>
-                            <div style="font-size: .4rem; color: var(--color-dorado); line-height: .2rem;">LOCALIZACIÓN</div>
+                            <div style="font-size: .5rem; color: var(--color-dorado); line-height: .3rem;">LOCALIZACIÓN</div>
                             <div style="margin-bottom: .2rem;">HOLIS</div>
                         </div>
                     </div>
@@ -184,6 +189,97 @@
             </div>
         </div>
     </section>
+    <section id="detalles" style="display: none; padding: 1rem;">
+        <div style="position: relative;">
+            <div style="height: 100%; width: 1px; background-color: var(--color-principal); position: absolute; left: 1.5rem;"></div>
+            <div class="grid" style="display: grid; grid-template-rows: repeat(7, minmax(0, 1fr)); gap: .5rem;">
+                <div style="display: flex; align-items: flex-start;">
+                    <span class="circle">
+                        <img src="img/recepcion.svg">
+                    </span>
+                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
+                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
+                            <div class="textHeader">RECEPCIÓN</div>
+                        </div>
+                        <div class="textSmall">Recepción de invitados</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <span class="circle">
+                        <img src="img/ceremonia.svg">
+                    </span>
+                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
+                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
+                            <div class="textHeader">CEREMONIA</div>
+                        </div>
+                        <div class="textSmall">El momento más especial del día</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <span class="circle">
+                        <img src="img/cocktail.svg">
+                    </span>
+                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
+                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
+                            <div class="textHeader">COCKTAIL</div>
+                        </div>
+                        <div class="textSmall">Aperitivos y bebidas en los jardines</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <span class="circle">
+                        <img src="img/banquete.svg">
+                    </span>
+                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
+                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
+                            <div class="textHeader">BANQUETE</div>
+                        </div>
+                        <div class="textSmall">Cena y celebración</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <span class="circle">
+                        <img src="img/interrogacion.svg">
+                    </span>
+                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
+                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
+                            <div class="textHeader">SORPRESAS</div>
+                        </div>
+                        <div class="textSmall">Igual os podemos sorprender más</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <span class="circle">
+                        <img src="img/fiesta.svg">
+                    </span>
+                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
+                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
+                            <div class="textHeader">FIESTA</div>
+                        </div>
+                        <div class="textSmall">¡A bailar hasta el amanecer!</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <span class="circle">
+                        <img src="img/fin.svg">
+                    </span>
+                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
+                            <div class="chip" style="margin-bottom: 0rem; width: 3rem;">12:00</div>
+                            <div class="textHeader">FIN</div>
+                        </div>
+                        <div class="textSmall">Final del día</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script>
         function actualizarVH() {
             let vh = window.innerHeight * 0.01;
@@ -192,9 +288,26 @@
         window.addEventListener('resize', actualizarVH);
         window.addEventListener('load', actualizarVH);
 
-        function irPagina() {
-            document.getElementById("portada").style.display = 'none';
-            document.getElementById("principal").style.display = 'block';
+        // Canción
+        const audio = document.getElementById("musica");
+        document.addEventListener("click", () => {
+            audio.play();
+        }, {once: true});
+        document.addEventListener("touchstart", () => {
+            audio.play();
+        }, {once: true});
+
+        // Páginas
+        function irPagina(index) {
+            if (index === 0) {
+                document.getElementById("portada").style.display = 'none';
+                document.getElementById("detalles").style.display = 'none';
+                document.getElementById("principal").style.display = 'block';
+            } else if (index === 1) {
+                document.getElementById("portada").style.display = 'none';
+                document.getElementById("principal").style.display = 'none';
+                document.getElementById("detalles").style.display = 'block';
+            }
         }
 
         // Cuenta atrás
