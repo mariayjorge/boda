@@ -55,6 +55,13 @@
         </div>
     </section>
     <section id="principal" style="display: none; padding: 1rem;">
+        <div class="musica" onclick="changeVolume()">
+            <img
+                id="imagenVolumen"
+                alt="musica"
+                src="img/volume-up.svg"
+                style="width: 1.5rem;"/>
+        </div>
         <div class="passports" style="margin-bottom: 1rem;">
             <div style="display: flex; justify-content: center; align-items: center;">
                 <div class="passport-close">
@@ -71,7 +78,7 @@
                     <div class="bodoni" style="font-size: .5rem; letter-spacing: .2rem;">25.07.2026</div>
                 </div>
             </div>
-            <div class="passport-open" onclick="irPagina(1)">
+            <div class="passport-open">
                 <div class="header">
                     <img
                         alt="mapamundi"
@@ -134,7 +141,7 @@
                 </div>
             </div>
         </div>
-        <div id="boarding-pass-group" style="margin-bottom: 2rem;">
+        <div id="boarding-pass-group" style="margin-bottom: 1.5rem;">
             <div class="boarding-pass-group">
                 <div class="boarding-pass-complete">
                     <div class="header">BOARDING PASS</div>
@@ -173,7 +180,7 @@
             </div>
         </div>
         <div id="photos">
-            <div style="display: flex; padding: 0 1rem;">
+            <div style="display: flex; padding: 0 1rem; margin-bottom: 1rem;">
                 <div style="width: fit-content; border: .5rem solid white; border-bottom: 1.5rem solid white; transform: rotate(-10deg);">
                     <img
                         alt="photo"
@@ -188,93 +195,69 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="detalles" style="display: none; padding: 2rem;">
-        <div style="position: relative;">
-            <div style="height: 100%; width: 1px; background-color: var(--color-principal); position: absolute; left: 1.5rem;"></div>
-            <div class="grid" style="display: grid; grid-template-rows: repeat(7, minmax(0, 1fr)); gap: .5rem;">
-                <div style="display: flex; align-items: flex-start;">
-                    <span class="circle">
-                        <img src="img/recepcion.svg">
-                    </span>
-                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
-                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
-                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
-                            <div class="textHeader">RECEPCIÓN</div>
+        <div id="time-event">
+            <div class="time-event">
+                <div class="line"></div>
+                <div class="events">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="chip">12:00</div>
+                        <div class="circle">
+                            <img 
+                                src="img/recepcion.svg"
+                                style="width: 1.5rem;">
                         </div>
-                        <div class="textSmall">Recepción de invitados</div>
+                        <div class="alumni" style="font-size: .8rem; color: var(--color-principal);">RECEPCIÓN</div>
+                        <div class="bodoni" style="font-size: .5rem; text-align: center;">Recepción de invitados</div>
                     </div>
-                </div>
-                <div style="display: flex; align-items: flex-start;">
-                    <span class="circle">
-                        <img src="img/ceremonia.svg">
-                    </span>
-                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
-                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
-                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
-                            <div class="textHeader">CEREMONIA</div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="chip">12:00</div>
+                        <div class="circle">
+                            <img 
+                                src="img/ceremonia.svg"
+                                style="width: 1.5rem;">
                         </div>
-                        <div class="textSmall">El momento más especial del día</div>
+                        <div class="alumni" style="font-size: .8rem; color: var(--color-principal);">CEREMONIA</div>
+                        <div class="bodoni" style="font-size: .5rem; text-align: center;">El momento más especial del día</div>
                     </div>
-                </div>
-                <div style="display: flex; align-items: flex-start;">
-                    <span class="circle">
-                        <img src="img/cocktail.svg">
-                    </span>
-                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
-                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
-                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
-                            <div class="textHeader">COCKTAIL</div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="chip">12:00</div>
+                        <div class="circle">
+                            <img 
+                                src="img/cocktail.svg"
+                                style="width: 1.5rem;">
                         </div>
-                        <div class="textSmall">Aperitivos y bebidas en los jardines</div>
+                        <div class="alumni" style="font-size: .8rem; color: var(--color-principal);">COCKTAIL</div>
+                        <div class="bodoni" style="font-size: .5rem; text-align: center;">Aperitivos y bebidas en los jardines</div>
                     </div>
-                </div>
-                <div style="display: flex; align-items: flex-start;">
-                    <span class="circle">
-                        <img src="img/banquete.svg">
-                    </span>
-                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
-                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
-                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
-                            <div class="textHeader">BANQUETE</div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="chip">12:00</div>
+                        <div class="circle">
+                            <img 
+                                src="img/banquete.svg"
+                                style="width: 1.5rem;">
                         </div>
-                        <div class="textSmall">Cena y celebración</div>
+                        <div class="alumni" style="font-size: .8rem; color: var(--color-principal);">BANQUETE</div>
+                        <div class="bodoni" style="font-size: .5rem; text-align: center;">Cena y celebración</div>
                     </div>
-                </div>
-                <div style="display: flex; align-items: flex-start;">
-                    <span class="circle">
-                        <img src="img/interrogacion.svg">
-                    </span>
-                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
-                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
-                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
-                            <div class="textHeader">SORPRESAS</div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="chip">12:00</div>
+                        <div class="circle">
+                            <img 
+                                src="img/fiesta.svg"
+                                style="width: 1.5rem;">
                         </div>
-                        <div class="textSmall">Igual os podemos sorprender más</div>
+                        <div class="alumni" style="font-size: .8rem; color: var(--color-principal);">FIESTA</div>
+                        <div class="bodoni" style="font-size: .5rem; text-align: center;">¡A bailar hasta el amanecer!</div>
                     </div>
-                </div>
-                <div style="display: flex; align-items: flex-start;">
-                    <span class="circle">
-                        <img src="img/fiesta.svg">
-                    </span>
-                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
-                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
-                            <div class="chip" style="margin-bottom: 0; width: 3rem;">12:00</div>
-                            <div class="textHeader">FIESTA</div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="chip">12:00</div>
+                        <div class="circle">
+                            <img 
+                                src="img/fin.svg"
+                                style="width: 1.5rem;">
                         </div>
-                        <div class="textSmall">¡A bailar hasta el amanecer!</div>
-                    </div>
-                </div>
-                <div style="display: flex; align-items: flex-start;">
-                    <span class="circle">
-                        <img src="img/fin.svg">
-                    </span>
-                    <div style="margin-left: .75rem; margin-bottom: .75rem;">
-                        <div style="display: flex; align-items: center; margin-bottom: .2rem;">
-                            <div class="chip" style="margin-bottom: 0rem; width: 3rem;">12:00</div>
-                            <div class="textHeader">FIN</div>
-                        </div>
-                        <div class="textSmall">Final del día</div>
+                        <div class="alumni" style="font-size: .8rem; color: var(--color-principal);">FINAL</div>
+                        <div class="bodoni" style="font-size: .5rem; text-align: center;">Final del día</div>
                     </div>
                 </div>
             </div>
@@ -297,17 +280,21 @@
             audio.play();
         }, {once: true});
 
+        const imagenVolumen = document.getElementById("imagenVolumen");
+        function changeVolume() {
+            if (audio.paused) {
+                audio.play();
+                imagenVolumen.src = "img/volume-up.svg";
+            } else {
+                audio.pause();
+                imagenVolumen.src = "img/volume-off.svg";
+            }
+        }
+
         // Páginas
         function irPagina(index) {
-            if (index === 0) {
-                document.getElementById("portada").style.display = 'none';
-                document.getElementById("detalles").style.display = 'none';
-                document.getElementById("principal").style.display = 'block';
-            } else if (index === 1) {
-                document.getElementById("portada").style.display = 'none';
-                document.getElementById("principal").style.display = 'none';
-                document.getElementById("detalles").style.display = 'block';
-            }
+            document.getElementById("portada").style.display = 'none';
+            document.getElementById("principal").style.display = 'block';
         }
 
         // Cuenta atrás

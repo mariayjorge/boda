@@ -79,6 +79,15 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.musica {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: .5rem;
+    border-radius: 50rem;
+    background: white;
+}
+
 .passports {
     display: grid;
     grid-template-columns: 45% 55%;
@@ -221,19 +230,48 @@
     }
 }
 
-.chip {
-    background: var(--color-principal);
-    color: white;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font-alumni);
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 900;
-    letter-spacing: .05rem;
+.time-event {
+    .line {
+        position: relative;
+        height: 1px; 
+        background-color: var(--color-principal);
+        top: 2.8rem;
+    }
+
+    .events {
+        display: grid; 
+        grid-template-columns: repeat(6, minmax(0, 1fr)); 
+        /* gap: 2rem;  */
+        justify-self: center; 
+        margin-bottom: 2rem;
+    }
+
+    .chip {
+        background: var(--color-principal);
+        color: white;
+        border-radius: .75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--font-alumni);
+        font-size: .6rem;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: .05rem;
+        padding: 0 .5rem;
+        margin-bottom: .3rem;
+    }
+
+    .circle {
+        border-radius: 50rem;
+        padding: .5rem;
+        background: white;
+        z-index: 1;
+        margin-bottom: .2rem;
+    }
 }
+
+
 .textHeader {
     font-family: var(--font-alumni);
     font-size: 1rem;
@@ -247,15 +285,4 @@
     font-size: .8rem;
     font-style: normal;
     font-weight: 400;
-}
-.circle {
-    background: white;
-    border-radius: 50rem;
-    border: 2px solid var(--color-principal);
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
 }
