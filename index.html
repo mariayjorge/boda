@@ -203,7 +203,7 @@
                 <div class="line"></div>
                 <div class="events">
                     <div style="display: flex; flex-direction: column; align-items: center;">
-                        <div class="chip">12:00</div>
+                        <div class="chip">18:30</div>
                         <div class="circle">
                             <img 
                                 src="img/recepcion.svg"
@@ -213,7 +213,7 @@
                         <div class="bodoni" style="font-size: .5rem; text-align: center;">Recepción de invitados</div>
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: center;">
-                        <div class="chip">12:00</div>
+                        <div class="chip">19:00</div>
                         <div class="circle">
                             <img 
                                 src="img/ceremonia.svg"
@@ -223,7 +223,7 @@
                         <div class="bodoni" style="font-size: .5rem; text-align: center;">El momento más especial del día</div>
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: center;">
-                        <div class="chip">12:00</div>
+                        <div class="chip">20:00</div>
                         <div class="circle">
                             <img 
                                 src="img/cocktail.svg"
@@ -233,7 +233,7 @@
                         <div class="bodoni" style="font-size: .5rem; text-align: center;">Aperitivos y bebidas en los jardines</div>
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: center;">
-                        <div class="chip">12:00</div>
+                        <div class="chip">22:00</div>
                         <div class="circle">
                             <img 
                                 src="img/banquete.svg"
@@ -243,7 +243,7 @@
                         <div class="bodoni" style="font-size: .5rem; text-align: center;">Cena y celebración</div>
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: center;">
-                        <div class="chip">12:00</div>
+                        <div class="chip">00:00</div>
                         <div class="circle">
                             <img 
                                 src="img/fiesta.svg"
@@ -253,7 +253,7 @@
                         <div class="bodoni" style="font-size: .5rem; text-align: center;">¡A bailar hasta el amanecer!</div>
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: center;">
-                        <div class="chip">12:00</div>
+                        <div class="chip">04:00</div>
                         <div class="circle">
                             <img 
                                 src="img/fin.svg"
@@ -324,7 +324,7 @@
             return new Date(`${valores.year}-${valores.month}-${valores.day}T` + `${valores.hour}:${valores.minute}:${valores.second}`);
         }
 
-        const date = new Date("2026-07-25T19:30:00");
+        const date = new Date("2026-07-25T19:00:00");
         function actualizarContador() {
             const diferencia = date.getTime() - ahoraEnMadrid().getTime();
             if (diferencia <= 0) {
