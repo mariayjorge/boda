@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Boda</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
 </head>
 <body style="background: var(--color-fondo);">
     <audio id="musica" loop>
@@ -82,13 +83,19 @@
                 <div class="header">
                     <img
                         alt="mapamundi"
-                        src="img/mapamundi.png"/>
+                        src="img/mapamundi.png"
+                        style="width: stretch;"/>
                 </div>
-                <div class="content">
+                <div class="content" onclick="irPagina(1)" style="position: relative;">
                     <div class="bodoni" style="text-align: center; letter-spacing: .1rem; font-size: .5rem; font-weight: 600; color: var(--color-principal); margin-bottom: .3rem; margin-top: .2rem;">DETALLES DE LA BODA</div>
                     <div style="display: grid; grid-template-columns: 40% 60%;">
+                        <div style="padding: .2rem;">
+                            <img
+                                alt="boarding-pass"
+                                src="img/passport-open.jpg"
+                                style="width: stretch;">
                         </div>
-                        <div style="margin-top: .2rem;">
+                        <div style="margin-top: .2rem; margin-left: .2rem;">
                             <div style="display: grid; grid-template-columns: 30% 30% 40%;">
                                 <div>
                                     <div style="font-size: .5rem; color: var(--color-dorado); line-height: .3rem;">EVENTO</div>
@@ -111,6 +118,12 @@
                             <div style="font-size: .5rem; color: var(--color-dorado); line-height: .3rem;">LOCALIZACIÓN</div>
                             <div style="margin-bottom: .2rem;">FINCA RONDA</div>
                         </div>
+                    </div>
+                    <div style="position: absolute; bottom: .25rem; right: .25rem; transform: rotate(10deg);">
+                        <img
+                            alt="info"
+                            src="img/postal.png"
+                            style="width: 2rem;">
                     </div>
                 </div>
             </div>
@@ -144,7 +157,15 @@
         <div id="boarding-pass-group" style="margin-bottom: 1.5rem;">
             <div class="boarding-pass-group">
                 <div class="boarding-pass-complete">
-                    <div class="header">BOARDING PASS</div>
+                    <div class="header">
+                        <div style="margin-right: 1rem;">BOARDING PASS</div>
+                        <div>
+                            <img
+                                alt="avion"
+                                src="img/avion-blanco.svg"
+                                style="width: .8rem;"/>
+                        </div>
+                    </div>
                     <div class="content" style="position: relative;">
                         <div style="position: absolute; top: 0; left: 0; opacity: 20%;">
                             <img
@@ -152,8 +173,8 @@
                                 src="img/sello.png"
                                 style="width: 5rem;"/>
                         </div>
-                        <div style="position: relative; display: grid; grid-template-columns: 70% 30%;">
-                            <div>
+                        <div style="position: relative; display: grid; grid-template-columns: 70% 30%; padding-top: .5rem;">
+                            <div style="align-self: flex-end;">
                                 <div style="display: grid; grid-template-columns: 50% 50%;">
                                     <div>
                                         <div style="font-weight: 100; font-size: .4rem;">DESDE</div>
@@ -167,10 +188,16 @@
                                 <div style="position: relative; font-weight: 100; font-size: .4rem; margin-top: .5rem;">NOMBRE DEL PASAJERO:</div>
                                 <div style="position: relative; font-weight: 100; font-size: .4rem;">NÚMERO DE CONTACTO:</div>
                             </div>
+                            <div>
+                                <img
+                                    alt="boarding-pass"
+                                    src="img/boarding-pass.jpg"
+                                    style="width: stretch;"/>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="rsvp">
+                <div class="rsvp" onclick="irPagina(2)">
                     <div class="header">RSVP</div>
                     <div class="content">
                         <div>CONFIRMA TU ASISTENCIA</div>
@@ -180,21 +207,146 @@
         </div>
         <div id="photos">
             <div style="display: flex; padding: 0 1rem; margin-bottom: 1rem;">
-                <div style="width: fit-content; border: .5rem solid white; border-bottom: 1.5rem solid white; transform: rotate(-10deg);">
-                    <img
-                        alt="photo"
-                        src="img/Lisboa.jpg"
-                        style="width: 5rem;"/>
+                <div>
+                    <div style="width: fit-content; border: .5rem solid white; border-bottom: 1rem solid white; transform: rotate(-10deg);">
+                        <img
+                            alt="photo"
+                            src="img/lisboa.jpg"
+                            style="width: 5rem;"/>
+                    </div>
                 </div>
-                <div style="width: fit-content; border: .5rem solid white; border-bottom: 1.5rem solid white; transform: rotate(5deg);">
-                    <img
-                        alt="photo"
-                        src="img/Orense.jpg"
-                        style="width: 5rem;"/>
+                <div>
+                    <div style="width: fit-content; border: .5rem solid white; border-bottom: 1rem solid white; transform: rotate(5deg);">
+                        <img
+                            alt="photo"
+                            src="img/orense.jpg"
+                            style="width: 5rem;"/>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="time-event">
+    </section>
+    <section id="detalles" style="display: none; padding: 1rem;">
+        <!-- <div class="back">
+            <img
+                alt="back"
+                src="img/back.svg"
+                style="width: 1.5rem;"/>
+        </div> -->
+        <div class="col-12 bodoni" style="font-size: 1.5rem; font-weight: 500; color: var(--color-principal);">DETALLES DE LA FINCA</div>
+        <div class="col-12 bodoni" style="font-weight: 600;">Finca Ronda</div>
+        <div style="position: relative;">
+            <div style="height: 100%; width: .1rem; background-color: var(--color-dorado); position: absolute;"></div>
+            <div style="display: grid; grid-template-columns: 48% 48%; gap: .25rem; padding-left: .5rem;">
+                <div>
+                    <img
+                        alt="finca"
+                        src="img/finca.png"
+                        style="width: stretch;"/>
+                </div>
+                <div>
+                    <img
+                        alt="finca"
+                        src="img/finca.png"
+                        style="width: stretch;"/>
+                </div>
+            </div>
+            <div style="padding-left: .5rem;">
+                <span class="bodoni" style="font-size: .8rem; font-weight: 600;">Dirección:</span> 
+                <span class="alumni" style="font-size: .8rem;">Carretera de San Agustín del Guadalix a Colmenar Viejo, Km 4.700, Madrid</span>
+            </div>
+        </div>
+        <div class="col-12 bodoni" style="font-size: 1.5rem; font-weight: 500; color: var(--color-principal);">PROGRAMA DEL DÍA</div>
+        <div class="time-event" style="position: relative;">
+            <div class="line-vertical"></div>
+            <div class="events-vertical">
+                <div style="display: flex; align-items: flex-start;">
+                    <div class="circle">
+                        <img 
+                            src="img/recepcion.svg"
+                            style="width: 1.5rem;">
+                    </div>
+                    <div style="margin-left: .5rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center;">
+                            <div class="chip-vertical">12:00</div>
+                            <div class="alumni" style="font-size: .9rem; color: var(--color-principal);">RECEPCIÓN</div>
+                        </div>
+                        <div class="bodoni" style="font-size: .7rem; text-align: center;">Recepción de invitados</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <div class="circle">
+                        <img 
+                            src="img/ceremonia.svg"
+                            style="width: 1.5rem;">
+                    </div>
+                    <div style="margin-left: .5rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center;">
+                            <div class="chip-vertical">12:00</div>
+                            <div class="alumni" style="font-size: .9rem; color: var(--color-principal);">CEREMONIA</div>
+                        </div>
+                        <div class="bodoni" style="font-size: .7rem; text-align: center;">El momento más especial del día</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <div class="circle">
+                        <img 
+                            src="img/cocktail.svg"
+                            style="width: 1.5rem;">
+                    </div>
+                    <div style="margin-left: .5rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center;">
+                            <div class="chip-vertical">12:00</div>
+                            <div class="alumni" style="font-size: .9rem; color: var(--color-principal);">COCKTAIL</div>
+                        </div>
+                        <div class="bodoni" style="font-size: .7rem; text-align: center;">Aperitivos y bebidas en los jardines</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <div class="circle">
+                        <img 
+                            src="img/banquete.svg"
+                            style="width: 1.5rem;">
+                    </div>
+                    <div style="margin-left: .5rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center;">
+                            <div class="chip-vertical">12:00</div>
+                            <div class="alumni" style="font-size: .9rem; color: var(--color-principal);">BANQUETE</div>
+                        </div>
+                        <div class="bodoni" style="font-size: .7rem; text-align: center;">Cena y celebración</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <div class="circle">
+                        <img 
+                            src="img/fiesta.svg"
+                            style="width: 1.5rem;">
+                    </div>
+                    <div style="margin-left: .5rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center;">
+                            <div class="chip-vertical">12:00</div>
+                            <div class="alumni" style="font-size: .9rem; color: var(--color-principal);">FIESTA</div>
+                        </div>
+                        <div class="bodoni" style="font-size: .7rem; text-align: center;">¡A bailar hasta el amanecer!</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start;">
+                    <div class="circle">
+                        <img 
+                            src="img/fin.svg"
+                            style="width: 1.5rem;">
+                    </div>
+                    <div style="margin-left: .5rem; margin-bottom: .75rem;">
+                        <div style="display: flex; align-items: center;">
+                            <div class="chip-vertical">12:00</div>
+                            <div class="alumni" style="font-size: .9rem; color: var(--color-principal);">FINAL</div>
+                        </div>
+                        <div class="bodoni" style="font-size: .7rem; text-align: center;">Final del día</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="time-event">
             <div class="time-event">
                 <div class="line"></div>
                 <div class="events">
@@ -260,7 +412,201 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+    </section>
+    <section id="formulario" style="display: none; padding: 2rem;">
+        <div class="col-12 bodoni" style="font-size: 1.5rem; font-weight: 500; color: var(--color-principal);">CONFIRMA TU VIAJE</div>
+        <div class="col-12 bodoni" style="margin-bottom: .5rem;">Esperamos contar contigo</div>
+        <div class="col-12" style="border: 1px solid var(--color-principal-opacity); background: white; border-radius: .5rem; padding: 1rem;">
+            <div class="input-group">
+                <span class="input-group-text">
+                     <img src="img/person.svg"/>
+                </span>
+                <div class="form-floating">
+                    <input type="text" class="form-control" name="NOMBRE" id="nombre" placeholder="Nombre completo">
+                    <label for="nombre">Nombre completo</label>
+                </div>
+            </div>
+            <div class="alumni" style="letter-spacing: .2rem; margin: .75rem 0 .5rem 0;">¿Asistirás?</div>
+            <div style="display: flex; gap: 1rem;">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="CONFIRMACION" id="si">
+                    <label class="form-check-label" for="radioDefault1" style="font-family: var(--font-alumni); font-weight: 900; letter-spacing: .05rem;">Sí</label>
+                </div>
+                <div class="form-check" style="margin-left: 1rem;">
+                    <input class="form-check-input" type="radio" name="CONFIRMACION" id="no" checked>
+                    <label class="form-check-label" for="radioDefault2" style="font-family: var(--font-alumni); font-weight: 900; letter-spacing: .05rem;">No</label>
+                </div>
+            </div>
+            <div class="hidden" id="confirmacion">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <img src="img/alergia.svg"/>
+                    </span>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="alergias" placeholder="Alergias, vegetariano, etc.">
+                        <label for="alergias">Alergias, vegetariano, etc.</label>
+                    </div>
+                </div>
+                <div class="form-floating" style="margin: .5rem 0;">
+                    <input type="text" class="form-control" id="cantidad" placeholder="Número de invitados (incluyéndote)" min="1" value="1">
+                    <label for="cantidad">Número de invitados (incluyéndote)</label>
+                </div>
+            </div>
+            <div class="hidden" style="padding: 1rem; background: var(--color-principal-opacity);" id="invitados"></div>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Mensaje para los novios" name="COMENTARIO" id="comentario" style="height: 100px;"></textarea>
+                <label for="floatingTextarea2">Mensaje para los novios</label>
+            </div>
+            <div style="margin-top: .5rem;">
+                <button class="button" disabled id="send">Enviar confirmación</button>
+            </div>
         </div>
+            <!-- <form 
+                class="form" 
+                method="POST"
+                data-email="esther.sanchezatienza@gmail.com" 
+                action="https://script.google.com/macros/s/AKfycbx_pB5XD9sRqaqIHAQC2bK3mhgWz0lO9DbjvTZORa6eBvUlxRNq7MLr25hW5kzTdZAU/exec">
+                <div class="row" style="margin-bottom: .5rem;">
+                    <div class="col-12 text">Nombre completo *</div>
+                </div>
+                <div class="row" style="margin-bottom: 1.5rem;">
+                    <div class="col-12">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <img src="img/person.svg">
+                            </span>
+                            <input class="inputGroup" name="NOMBRE" placeholder="Tu nombre" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: .8rem;">
+                    <div class="col-12 text">¿Asistirás? *</div>
+                </div>
+                <div class="row" style="margin-bottom: 1rem;">
+                    <div class="col-12 text" style="display: flex; align-items: center;">
+                        <div class="form-check" style="cursor: pointer; margin-right: 2rem;">
+                            <input class="form-check-input" type="radio" name="CONFIRMACION" id="si" style="margin-top: 0; cursor: pointer;" value="SI">
+                            <label class="form-check-label" for="si" style="cursor: pointer;">Sí, asistiré</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="CONFIRMACION" id="no" style="margin-top: 0; cursor: pointer;" value="NO">
+                            <label class="form-check-label" for="no" style="cursor: pointer;">No podré asistir</label>
+                        </div>
+                    </div>
+                </div>
+                <span id="intolerancias" class="hidden">
+                    <div class="row" style="margin-bottom: .5rem;">
+                        <div class="col-12 text">Número de invitados (incluyéndote)</div>
+                    </div>
+                    <div class="row" style="margin-bottom: 1.5rem;">
+                        <div class="col-12">
+                            <input class="input" type="number" min="1" value="1" id="cantidad" required>
+                        </div>
+                    </div>
+                    <div class="row invitados hidden" id="invitados"></div>
+                    <div class="row" style="margin-bottom: .5rem;">
+                        <div class="col-12 text" style="display: flex; align-items: center; gap: .5rem;">
+                            <img src="img/warning-yellow.svg">
+                            Alergias e intolerancias alimentarias
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: .8rem;">
+                        <div class="col-12 textSmall" style="font-size: .8rem;">Es muy importante para nosotros conocer cualquier restricción alimentaria. Selecciona las que apliquen:</div>
+                    </div>
+                    <div class="row" style="margin-bottom: 1rem;">
+                        <div class="col-6 text" style="display: flex; align-items: center;">
+                            <div class="form-check" style="cursor: pointer; margin-right: 2rem;">
+                                <input class="form-check-input" type="checkbox" name="CELIACO" id="celiaco" style="margin-top: 0; cursor: pointer;" value="SI">
+                                <label class="form-check-label" for="celiaco" style="cursor: pointer;">Sin gluten / Celíaco</label>
+                            </div>
+                        </div>
+                        <div class="col-6 text" style="display: flex; align-items: center;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="LACTOSA" id="lactosa" style="margin-top: 0; cursor: pointer;" value="SI">
+                                <label class="form-check-label" for="lactosa" style="cursor: pointer;">Sin lactosa</label>
+                            </div>
+                        </div>
+                        <div class="col-6 text" style="display: flex; align-items: center;">
+                            <div class="form-check" style="cursor: pointer; margin-right: 2rem;">
+                                <input class="form-check-input" type="checkbox" name="VEGETARIANO" id="vegetariano" style="margin-top: 0; cursor: pointer;" value="SI">
+                                <label class="form-check-label" for="vegetariano" style="cursor: pointer;">Vegetariano</label>
+                            </div>
+                        </div>
+                        <div class="col-6 text" style="display: flex; align-items: center;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="VEGANO" id="vegano" style="margin-top: 0; cursor: pointer;" value="SI">
+                                <label class="form-check-label" for="vegano" style="cursor: pointer;">Vegano</label>
+                            </div>
+                        </div>
+                        <div class="col-6 text" style="display: flex; align-items: center;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="FRUTOS SECOS" id="frutos" style="margin-top: 0; cursor: pointer;" value="SI">
+                                <label class="form-check-label" for="frutos" style="cursor: pointer;">Alergia a frutos secos</label>
+                            </div>
+                        </div>
+                        <div class="col-6 text" style="display: flex; align-items: center;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="MARISCOS" id="maricos" style="margin-top: 0; cursor: pointer;" value="SI">
+                                <label class="form-check-label" for="maricos" style="cursor: pointer;">Alergia a mariscos</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: .5rem;">
+                        <div class="col-12 text">Otras alergias o restricciones</div>
+                    </div>
+                    <div class="row" style="margin-bottom: 1.5rem;">
+                        <div class="col-12">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <img src="img/warning-green.svg">
+                                </span>
+                                <input class="inputGroup" name="ALERGIAS" placeholder="Ej.: alergia al huevo, intolerancia a la fructosa...">
+                            </div>
+                        </div>
+                    </div>
+                </span>
+                <div class="row" style="margin-bottom: .5rem;">
+                    <div class="col-12 text">Canción que no puede faltar</div>
+                </div>
+                <div class="row" style="margin-bottom: 1.5rem;">
+                    <div class="col-12">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <img src="img/song.svg">
+                            </span>
+                            <input class="inputGroup" name="CANCION" placeholder="Artista - Nombre de la canción">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: .5rem;">
+                    <div class="col-12 text">Mensaje para los novios (opcional)</div>
+                </div>
+                <div class="row" style="margin-bottom: 1.5rem;">
+                    <div class="col-12">
+                        <textarea class="textarea" name="MENSAJE" placeholder="Escríbenos unas palabras..." id="mensaje"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button class="button" disabled id="send">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="buttonIcon">
+                                <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
+                                <path d="m21.854 2.147-10.94 10.939"></path>
+                            </svg>
+                            Enviar confirmación
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="thankyou_message" style="display:none;">
+                        <h2><em>Thanks</em> for contacting us!
+                            We will get back to you soon!</h2>
+                        </div>
+                    </div>
+                </div>
+            </form> -->
     </section>
     <script>
         function actualizarVH() {
@@ -272,12 +618,12 @@
 
         // Canción
         const audio = document.getElementById("musica");
-        document.addEventListener("click", () => {
+        /*document.addEventListener("click", () => {
             audio.play();
         }, {once: true});
         document.addEventListener("touchstart", () => {
             audio.play();
-        }, {once: true});
+        }, {once: true});*/
 
         const imagenVolumen = document.getElementById("imagenVolumen");
         function changeVolume() {
@@ -292,8 +638,22 @@
 
         // Páginas
         function irPagina(index) {
-            document.getElementById("portada").style.display = 'none';
-            document.getElementById("principal").style.display = 'block';
+            if (index === 0) {
+                document.getElementById("portada").style.display = 'none';
+                document.getElementById("detalles").style.display = 'none';
+                document.getElementById("formulario").style.display = 'none';
+                document.getElementById("principal").style.display = 'block';
+            } else if (index === 1) {
+                document.getElementById("portada").style.display = 'none';
+                document.getElementById("principal").style.display = 'none';
+                document.getElementById("formulario").style.display = 'none';
+                document.getElementById("detalles").style.display = 'block';
+            } else if (index === 2) {
+                document.getElementById("portada").style.display = 'none';
+                document.getElementById("principal").style.display = 'none';
+                document.getElementById("detalles").style.display = 'none';
+                document.getElementById("formulario").style.display = 'block';
+            }
         }
 
         // Cuenta atrás
@@ -339,6 +699,63 @@
         }
         actualizarContador();
         const intervalo = setInterval(actualizarContador, 1000);
+
+        // Asistencia
+        const checkboxSi = document.getElementById("si");
+        const checkboxNo = document.getElementById("no");
+        const confirmacion = document.getElementById("confirmacion");
+        const send = document.getElementById("send");
+        checkboxSi.addEventListener("change", () => {
+            confirmacion.classList.remove("hidden");
+            send.disabled = false;
+        });
+        checkboxNo.addEventListener("change", () => {
+            confirmacion.classList.add("hidden");
+            send.disabled = false;
+        });
+
+        // Invitados
+        const cantidad = document.getElementById("cantidad");
+        const invitados = document.getElementById("invitados");
+        cantidad.addEventListener("input", () => {
+            const num = parseInt(cantidad.value);
+            invitados.innerHTML = "";
+            if (!isNaN(num) & num < 1) {
+                cantidad.value = 1;
+                num = 1;
+            } 
+            if (isNaN(num) || num == 1) {
+                invitados.classList.add("hidden");
+            } else {
+                invitados.classList.remove("hidden");
+            }
+            if (isNaN(num) || num <= 1) return;
+            for (let i = 2; i <= num; i++) {
+                const div = document.createElement("div");
+                div.innerHTML = `
+                    <div class="alumni" style="letter-spacing: .2rem; margin: 0 0 .5rem 0;">Invitado ${i}</div>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                                <img src="img/person.svg"/>
+                        </span>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre completo" name="NOMBRE INVITADO ${i}">
+                            <label for="nombre">Nombre completo</label>
+                        </div>
+                    </div>
+                    <div class="input-group" style="margin-bottom: .5rem">
+                        <span class="input-group-text">
+                            <img src="img/alergia.svg"/>
+                        </span>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="alergias" placeholder="Alergias, vegetariano, etc." name="ALERGIAS INVITADO ${i}">
+                            <label for="alergias">Alergias, vegetariano, etc.</label>
+                        </div>
+                    </div>
+                `;
+                invitados.appendChild(div);
+            }
+        })
     </script>
 </body>
 </html>
