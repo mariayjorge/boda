@@ -41,12 +41,10 @@
     formData.formGoogleSendEmail
       = form.dataset.email || ""; // no email by default
 
-    console.log(formData);
     return {data: formData};
   }
 
   function handleFormSubmit(event) {  // handles form submit without any jquery
-    console.log("handleFormSumit");
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
     var formData = getFormData(form);
@@ -61,13 +59,16 @@
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
           form.reset();
-          var formElements = form.querySelector(".form-elements")
+          var formElements = form.querySelector(".form")
           if (formElements) {
             formElements.style.display = "none"; // hide form
           }
-          var thankYouMessage = form.querySelector(".thankyou_message");
-          if (thankYouMessage) {
-            thankYouMessage.style.display = "block";
+          var thankYouMessageSi = form.querySelector(".thankyou_message_yes");
+          var thankYouMessageNo = form.querySelector(".thankyou_message_no");
+          if (formData.data.CONFIRMACION === "SI") {
+            thankYouMessageSi.style.display = "block";
+          } else {
+            thankYouMessageNo.style.display = "block";
           }
         }
     };

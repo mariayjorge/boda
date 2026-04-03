@@ -252,6 +252,7 @@
                 alt="back"
                 src="img/back-dorado.svg"
                 style="width: 1.5rem;"/>
+            <span class="text-form" style="color: var(--color-dorado); margin-left: 7rem; font-weight: 700;">María & Jorge</span>
         </div>
         <div class="col-12 bodoni" style="font-size: 1.5rem; font-weight: 500; color: var(--color-principal); margin-bottom: .5rem;">DETALLES DE LA FINCA</div>
         <div class="col-12" style="border: 1px solid var(--color-principal-opacity); background: white; border-radius: .5rem; padding: 1rem;">
@@ -262,13 +263,13 @@
                     <div>
                         <img
                             alt="finca"
-                            src="img/finca.png"
+                            src="img/finca1.jpg"
                             style="width: stretch;"/>
                     </div>
                     <div>
                         <img
                             alt="finca"
-                            src="img/finca.png"
+                            src="img/finca2.jpg"
                             style="width: stretch;"/>
                     </div>
                 </div>
@@ -276,6 +277,8 @@
             <div>
                 <span class="bodoni" style="font-size: .8rem; font-weight: 600; opacity: .8;">Dirección:</span> 
                 <span class="alumni" style="font-size: .8rem; color: var(--color-principal);">Carretera de San Agustín del Guadalix a Colmenar Viejo, Km 4.700, Madrid</span>
+                <span class="bodoni" style="font-size: .8rem; font-weight: 600; opacity: .8;">Enlace:</span> 
+                <span class="alumni" style="font-size: .8rem; color: var(--color-principal);" url="https://maps.app.goo.gl/pa7FurRhtho9fChj7?g_st=aw">https://maps.app.goo.gl/pa7FurRhtho9fChj7?g_st=aw</span>
             </div>
         </div>
         <div class="col-12 bodoni" style="font-size: 1.5rem; font-weight: 500; color: var(--color-principal); margin-top: 2rem;">PROGRAMA DEL DÍA</div>
@@ -376,6 +379,7 @@
                 alt="back"
                 src="img/back-dorado.svg"
                 style="width: 1.5rem;"/>
+            <span class="text-form" style="color: var(--color-dorado); margin-left: 7rem; font-weight: 700;">María & Jorge</span>
         </div>
         <div class="col-12 bodoni" style="font-size: 1.5rem; font-weight: 500; color: var(--color-principal);">PREGUNTAS</div>
         <div class="col-12 bodoni" style="font-size: .8rem; opacity: .8; margin-bottom: .5rem;">¿Tienes dudas? No te preocupes, nosotros te las resolvemos</div>
@@ -422,6 +426,7 @@
                 alt="back"
                 src="img/back-dorado.svg"
                 style="width: 1.5rem;"/>
+            <span class="text-form" style="color: var(--color-dorado); margin-left: 7rem; font-weight: 700;">María & Jorge</span>
         </div>
         <div class="col-12 bodoni" style="font-size: 1.5rem; font-weight: 500; color: var(--color-principal);">GALERÍA</div>
         <div class="col-12 bodoni" style="font-size: .8rem; opacity: .8; margin-bottom: .5rem;">Conócenos un poco más viajando a través de nuestras aventuras</div>
@@ -724,6 +729,7 @@
                 alt="back"
                 src="img/back-dorado.svg"
                 style="width: 1.5rem;"/>
+            <span class="text-form" style="color: var(--color-dorado); margin-left: 7rem; font-weight: 700;">María & Jorge</span>
         </div>
         <div class="col-12 bodoni" style="font-size: 1.5rem; font-weight: 500; color: var(--color-principal);">CONFIRMA TU VIAJE</div>
         <div class="col-12 bodoni" style="margin-bottom: .5rem; opacity: .8;">Esperamos contar contigo</div>
@@ -731,63 +737,68 @@
             <form 
                 class="form" 
                 method="POST"
-                data-email="esther.sanchezatienza@gmail.com" 
+                data-email="cerratotorrijosmaria@gmail.com" 
                 action="https://script.google.com/macros/s/AKfycbx_pB5XD9sRqaqIHAQC2bK3mhgWz0lO9DbjvTZORa6eBvUlxRNq7MLr25hW5kzTdZAU/exec">
-                <div class="text-form">Nombre completo *</div>
-                <div class="input-group" style="margin-bottom: .75rem;">
-                    <span class="input-group-text">
-                        <img src="img/person.svg">
-                    </span>
-                    <input class="inputGroup" name="NOMBRE" placeholder="Tu nombre" required>
-                </div>
-                <div class="text-form">¿Asistirás?</div>
-                <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: .75rem;">
-                    <div class="form-check" style="cursor: pointer;">
-                        <input class="form-check-input" type="radio" name="CONFIRMACION" id="si" style="cursor: pointer;" value="SI">
-                        <label class="form-check-label" for="si" style="cursor: pointer;">Sí, asistiré</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="CONFIRMACION" id="no" style="cursor: pointer;" value="NO">
-                        <label class="form-check-label" for="no" style="cursor: pointer;">No podré asistir</label>
-                    </div>
-                </div>
-                <div class="hidden" id="confirmacion">
-                    <div class="text-form">Alergias e intolerancias alimentarias</div>
+                <div class="form">
+                    <div class="text-form">Nombre completo *</div>
                     <div class="input-group" style="margin-bottom: .75rem;">
                         <span class="input-group-text">
-                            <img src="img/alergia.svg">
+                            <img src="img/person.svg">
                         </span>
-                        <input class="inputGroup" name="ALERGIAS" placeholder="Ej.: alergia al huevo, intolerancia a la fructosa...">
+                        <input class="inputGroup" name="NOMBRE" placeholder="Tu nombre" required>
                     </div>
-                    <div class="text-form">Número de invitados (incluyéndote)</div>
-                    <input class="input" type="number" min="1" value="1" id="cantidad" required style="margin-bottom: .75rem;">
-                    <div class="hidden" style="padding: .5rem 1rem; margin-bottom: .75rem; background: var(--color-principal-opacity); border-radius: .5rem;" id="invitados"></div>
-                    <div class="text-form">¿Necesitas transporte?</div>
+                    <div class="text-form">¿Asistirás?</div>
                     <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: .75rem;">
                         <div class="form-check" style="cursor: pointer;">
-                            <input class="form-check-input" type="radio" name="TRANSPORTE" id="si" style="cursor: pointer;" value="SI">
-                            <label class="form-check-label" for="si" style="cursor: pointer;">Sí</label>
+                            <input class="form-check-input si" type="radio" name="CONFIRMACION" id="si" style="cursor: pointer;" value="SI">
+                            <label class="form-check-label" for="si" style="cursor: pointer;">Sí, asistiré</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="TRANSPORTE" id="no" style="cursor: pointer;" value="NO">
-                            <label class="form-check-label" for="no" style="cursor: pointer;">No</label>
+                            <input class="form-check-input no" type="radio" name="CONFIRMACION" id="no" style="cursor: pointer;" value="NO">
+                            <label class="form-check-label" for="no" style="cursor: pointer;">No podré asistir</label>
                         </div>
                     </div>
-                </div>
-                <div class="text-form">Mensaje para los novios (opcional)</div>
-                <textarea class="textarea" name="MENSAJE" placeholder="Escríbenos unas palabras..." id="mensaje"></textarea>
-                <button class="button" disabled id="send">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="buttonIcon">
-                        <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
-                        <path d="m21.854 2.147-10.94 10.939"></path>
-                    </svg>
-                    Enviar confirmación
-                </button>
-                <div class="col-12">
-                    <div class="thankyou_message" style="display:none;">
-                    <h2><em>Thanks</em> for contacting us!
-                        We will get back to you soon!</h2>
+                    <div class="hidden" id="confirmacion">
+                        <div class="text-form">Alergias e intolerancias alimentarias</div>
+                        <div class="input-group" style="margin-bottom: .75rem;">
+                            <span class="input-group-text">
+                                <img src="img/alergia.svg">
+                            </span>
+                            <input class="inputGroup" name="ALERGIAS" placeholder="Ej.: alergia al huevo, intolerancia a la fructosa...">
+                        </div>
+                        <div class="text-form">Número de invitados (incluyéndote)</div>
+                        <input class="input" type="number" min="1" value="1" id="cantidad" required style="margin-bottom: .75rem;">
+                        <div class="hidden" style="padding: .5rem 1rem; margin-bottom: .75rem; background: var(--color-principal-opacity); border-radius: .5rem;" id="invitados"></div>
+                        <div class="text-form">¿Necesitas transporte?</div>
+                        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: .75rem;">
+                            <div class="form-check" style="cursor: pointer;">
+                                <input class="form-check-input" type="radio" name="TRANSPORTE" id="transporte-si" style="cursor: pointer;" value="SI">
+                                <label class="form-check-label" for="transporte-si" style="cursor: pointer;">Sí</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="TRANSPORTE" id="transporte-no" style="cursor: pointer;" value="NO">
+                                <label class="form-check-label" for="transporte-no" style="cursor: pointer;">No</label>
+                            </div>
+                        </div>
                     </div>
+                    <div class="text-form">Mensaje para los novios (opcional)</div>
+                    <textarea class="textarea" name="MENSAJE" placeholder="Escríbenos unas palabras..." id="mensaje"></textarea>
+                    <button class="button" disabled id="send">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="buttonIcon">
+                            <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
+                            <path d="m21.854 2.147-10.94 10.939"></path>
+                        </svg>
+                        Enviar confirmación
+                    </button>
+                </div>
+                <div class="thankyou_message_no" style="display: none;">
+                    <div class="bodoni" style="margin-bottom: 1rem;">Oh no, parece que tu vuelo ha cambiado de rumbo 🌍 </div>
+                    <div class="bodoni">Gracias por avisarnos, esperamos coincidir en la próxima escala ✈️</div>
+                </div>
+                <div class="thankyou_message_yes" style="display:none;">
+                    <div class="bodoni" style="margin-bottom: 1rem;">¡Tarjeta de embarque lista! 🎫 </div>
+                    <div class="bodoni" style="margin-bottom: 1rem;">Gracias por rellenarlo todo. Ya estás oficialmente a bordo, así que solo queda elegir tu mejor outfit de pasajero VIP.</div>
+                    <div class="bodoni">¡Nos vemos en la puerta de embarque! 😁</div>
                 </div>
             </form>
         </div>
