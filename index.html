@@ -55,7 +55,43 @@
             </div>
         </div>
     </section>
-    <section id="principal" style="display: none; padding: 1rem;">
+    <section id="principal" style="display: none; padding: 1rem; max-width: 800px; margin-right: auto; margin-left: auto; position: relative;">
+        <div style="position: absolute; top: 28rem; left: 8rem; opacity: 70%;">
+            <img
+                alt="sello"
+                src="img/sello1.png"
+                style="width: 5rem;"/>
+        </div>
+        <div style="position: absolute; top: 26rem; left: 4rem; opacity: 70%;">
+            <img
+                alt="sello"
+                src="img/sello2.png"
+                style="width: 5rem;"/>
+        </div>
+        <div style="position: absolute; top: 3.5rem; left: 1rem; opacity: 70%;">
+            <img
+                alt="sello"
+                src="img/info1.png"
+                style="width: 5rem;"/>
+        </div>
+        <div style="position: absolute; top: 16rem; right: 4.5rem; opacity: 70%;">
+            <img
+                alt="sello"
+                src="img/info2.png"
+                style="width: 5rem;"/>
+        </div>
+        <div style="position: absolute; top: 12rem; right: 2rem; opacity: 70%;">
+            <img
+                alt="sello"
+                src="img/info3.png"
+                style="width: 5rem;"/>
+        </div>
+        <div style="position: absolute; top: 15rem; left: 8rem; opacity: 70%;">
+            <img
+                alt="sello"
+                src="img/huella.png"
+                style="width: 5rem;"/>
+        </div>
         <div class="musica" onclick="changeVolume()">
             <img
                 id="imagenVolumen"
@@ -64,7 +100,7 @@
                 style="width: 1.5rem;"/>
         </div>
         <div class="passports" style="margin-bottom: 1rem;">
-            <div style="display: flex; justify-content: center; align-items: center;">
+            <div style="display: flex; justify-content: center; align-items: center; z-index: 1;">
                 <div class="passport-close">
                     <div class="alex" style="line-height: 1rem;">Wedding</div>
                     <div class="bodoni" style="line-height: 1rem; font-size: 1rem;">PASSPORT</div>
@@ -79,12 +115,12 @@
                     <div class="bodoni" style="font-size: .5rem; letter-spacing: .2rem;">25.07.2026</div>
                 </div>
             </div>
-            <div class="passport-open">
+            <div class="passport-open" style="z-index: 1;">
                 <div class="header">
                     <img
                         alt="mapamundi"
                         src="img/mapamundi.png"
-                        style="width: stretch; max-width: 215px;"/>
+                        style="width: stretch;"/>
                 </div>
                 <div class="content" onclick="irPagina(1)" style="position: relative;">
                     <div class="bodoni" style="text-align: center; letter-spacing: .1rem; font-size: .5rem; font-weight: 600; color: var(--color-principal); margin-bottom: .3rem; margin-top: .2rem;">DETALLES DE LA BODA</div>
@@ -93,7 +129,7 @@
                             <img
                                 alt="boarding-pass"
                                 src="img/passport-open.jpg"
-                                style="width: stretch; max-width: 75px;">
+                                style="width: stretch;">
                         </div>
                         <div style="margin-top: .2rem; margin-left: .2rem;">
                             <div style="display: grid; grid-template-columns: 30% 30% 40%;">
@@ -128,7 +164,7 @@
                 </div>
             </div>
         </div>
-        <div id="count-down" style="margin-bottom: .5rem;">
+        <div id="count-down" style="margin-bottom: .5rem; position: relative; z-index: 1; margin-left: auto; margin-right: auto;">
             <div class="count-down">
                 <div class="header" style="font-weight: bold;">PRÓXIMO EMBARQUE</div>
                 <div class="content">
@@ -154,7 +190,7 @@
                 </div>
             </div>
         </div>
-        <div id="boarding-pass-group" style="margin-bottom: 1.5rem;">
+        <div id="boarding-pass-group" style="margin-bottom: 1.5rem; position: relative; z-index: 1;">
             <div class="boarding-pass-group">
                 <div class="boarding-pass-complete">
                     <div class="header">
@@ -171,6 +207,12 @@
                             <img
                                 alt="sello"
                                 src="img/sello.png"
+                                style="width: 5rem;"/>
+                        </div>
+                        <div style="position: absolute; top: .8rem; left: 3rem; opacity: 80%; transform: rotate(-10deg);">
+                            <img
+                                alt="sello"
+                                src="img/ruta.png"
                                 style="width: 5rem;"/>
                         </div>
                         <div style="position: relative; display: grid; grid-template-columns: 70% 30%; padding-top: .5rem;">
@@ -211,7 +253,7 @@
                 </div>
             </div>
         </div>
-        <div id="photos">
+        <div id="photos" style="z-index: 1;">
             <div style="display: flex; justify-content: center; padding: 0 1rem; margin-bottom: 1rem;">
                 <div onclick="irPagina(5)">
                     <div style="width: fit-content; transform: rotate(-10deg);">
@@ -246,7 +288,7 @@
             </div>
         </div>
     </section>
-    <section id="detalles" style="display: none; padding: 3rem 2rem 2rem 2rem;">
+    <section id="detalles" style="display: none; padding: 3rem 2rem 2rem 2rem; max-width: 800px; margin-right: auto; margin-left: auto;">
         <div class="back" onclick="irPagina(0)">
             <img
                 alt="back"
@@ -259,17 +301,17 @@
             <div class="col-12 bodoni" style="margin-bottom: .5rem; opacity: .8;">Finca Ronda</div>
             <div style="position: relative;">
                 <div style="height: 100%; width: .1rem; background-color: var(--color-dorado); position: absolute;"></div>
-                <div style="display: grid; grid-template-columns: 48% 48%; gap: .25rem; padding-left: .5rem;">
+                <div style="display: grid; grid-template-columns: 48% 48%; gap: .25rem; padding-left: .5rem; margin-bottom: .5rem;">
                     <div>
                         <img
                             alt="finca"
-                            src="img/finca1.jpg"
+                            src="img/finca1.png"
                             style="width: stretch;"/>
                     </div>
                     <div>
                         <img
                             alt="finca"
-                            src="img/finca2.jpg"
+                            src="img/finca2.png"
                             style="width: stretch;"/>
                     </div>
                 </div>
@@ -277,8 +319,12 @@
             <div>
                 <span class="bodoni" style="font-size: .8rem; font-weight: 600; opacity: .8;">Dirección:</span> 
                 <span class="alumni" style="font-size: .8rem; color: var(--color-principal);">Carretera de San Agustín del Guadalix a Colmenar Viejo, Km 4.700, Madrid</span>
-                <span class="bodoni" style="font-size: .8rem; font-weight: 600; opacity: .8;">Enlace:</span> 
-                <span class="alumni" style="font-size: .8rem; color: var(--color-principal);" url="https://maps.app.goo.gl/pa7FurRhtho9fChj7?g_st=aw">https://maps.app.goo.gl/pa7FurRhtho9fChj7?g_st=aw</span>
+                <div class="bodoni" style="font-size: .8rem; font-weight: 600; opacity: .8;">
+                    Enlace: 
+                    <span class="alumni" style="font-size: .8rem; color: var(--color-principal);">
+                        <a href="https://maps.app.goo.gl/pa7FurRhtho9fChj7?g_st=aw" target="_blank">Abrir en Google Maps</a>
+                    </span>
+                </div> 
             </div>
         </div>
         <div class="col-12 bodoni" style="font-size: 1.5rem; font-weight: 500; color: var(--color-principal); margin-top: 2rem;">PROGRAMA DEL DÍA</div>
@@ -373,7 +419,7 @@
             </div>
         </div>
     </section>
-    <section id="faqs" style="display: none; padding: 3rem 2rem 2rem 2rem;">
+    <section id="faqs" style="display: none; padding: 3rem 2rem 2rem 2rem; max-width: 800px; margin-right: auto; margin-left: auto;">
         <div class="back" onclick="irPagina(0)">
             <img
                 alt="back"
@@ -420,7 +466,7 @@
             <div class="subtext-form" style="margin-bottom: 0rem;">Jorge (639028261)</div>
         </div>
     </section>
-    <section id="fotos" style="display: none; padding: 3rem 2rem 2rem 2rem;">
+    <section id="fotos" style="display: none; padding: 3rem 2rem 2rem 2rem; max-width: 800px; margin-right: auto; margin-left: auto;">
         <div class="back" onclick="irPagina(0)">
             <img
                 alt="back"
@@ -723,7 +769,7 @@
             </div>
         </div>
     </section>
-    <section id="formulario" style="display: none; padding: 3rem 2rem 2rem 2rem;">
+    <section id="formulario" style="display: none; padding: 3rem 2rem 2rem 2rem; max-width: 800px; margin-right: auto; margin-left: auto;">
         <div class="back" onclick="irPagina(0)">
             <img
                 alt="back"

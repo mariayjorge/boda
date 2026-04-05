@@ -98,6 +98,7 @@
     padding: .25rem;
     background: var(--color-principal);
     width: 100%;
+    z-index: 1;
 }
 
 .passports {
@@ -151,7 +152,6 @@
         font-size: .6rem;
         font-style: normal;
         font-weight: 900;
-        border-top: .2rem solid var(--color-principal);
         color: white;
     }
 
@@ -189,7 +189,6 @@
             font-size: .6rem;
             font-style: normal;
             font-weight: 900;
-            border-top: .2rem solid var(--color-principal);
             color: white;
         }
 
@@ -207,13 +206,11 @@
 
     .rsvp {
         width: 100%;
-        display: inline-block;
+        /* display: inline-block;
         padding: 0rem;
         border: 2px solid var(--color-dorado); 
-    /* Esto suaviza las esquinas del recuadro */
         border-radius: .6rem;   
-    /* Evita que el color del header se salga de las esquinas redondeadas */
-        overflow: hidden;
+        overflow: hidden; */
 
         .header {
             display: flex;
@@ -227,7 +224,6 @@
             font-size: .6rem;
             font-style: normal;
             font-weight: 900;
-            border-top: .2rem solid var(--color-dorado);
             color: white;
         }
 
@@ -245,6 +241,8 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            border: 2px solid var(--color-dorado);
+            border-top: none;
         }
     }
 }
