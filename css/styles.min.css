@@ -207,6 +207,13 @@
 
     .rsvp {
         width: 100%;
+        display: inline-block;
+        padding: 0rem;
+        border: 2px solid var(--color-dorado); 
+    /* Esto suaviza las esquinas del recuadro */
+        border-radius: .6rem;   
+    /* Evita que el color del header se salga de las esquinas redondeadas */
+        overflow: hidden;
 
         .header {
             display: flex;
